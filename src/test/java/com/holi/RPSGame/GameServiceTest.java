@@ -53,13 +53,13 @@ public class GameServiceTest {
     /**
      * Testet, ob der Spieler in den definierten Fällen verliert
      * --Schere (0) gg. Stein (1)
-     * --Stein (1) gg. Brunnen (3)
+     * --Stein (1) gg. Brunnen (2)
      * -- Brunnen (3) gg. Papier (2)
      */
     @Test
     public void playerVerliert(){
         assertFalse(gameService.theWinnerIs(0, 1));
-        assertFalse(gameService.theWinnerIs(1, 3));
+        assertFalse(gameService.theWinnerIs(1, 2));
         assertFalse(gameService.theWinnerIs(3, 2));
     }
 

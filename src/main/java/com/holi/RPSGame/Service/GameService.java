@@ -1,10 +1,8 @@
 package com.holi.RPSGame.Service;
 
 import com.holi.RPSGame.API.GameResponse;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -51,13 +49,12 @@ public class GameService {
     }
 
     /**
-     * Vergleich beide Züge, um einen Spielergebniss CHCzu ermitteln.
+     * Vergleich beide Züge, um ein Spielergebniss zu ermitteln.
      *
      * @param computerPick Auswahl des Computers als Index-Wert
      * @param humanPick Auswahl des Spielers als Index-Wert
      * @return Gibt das Spielergebnis als String zurück
      */
-    @NotNull
     private String getDecision(int computerPick, int humanPick) {
         String decision;
         if (computerPick == humanPick) {
@@ -81,7 +78,7 @@ public class GameService {
         boolean[][] winMatrix = {
                          // Schere Stein Papier Brunnen
                 /*Schere*/ {false, false, true, false},
-                /*Stein*/  {true, false, true, false},
+                /*Stein*/  {true, false, false, false},
                 /*Papier*/ {false, true, false, true},
                /*Brunnen*/ {true, true, false, false}
 
